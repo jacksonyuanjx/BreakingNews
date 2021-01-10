@@ -5,6 +5,7 @@ import theme from "./theme";
 
 import Home from "./pages/Home";
 import Summaries from "./pages/Summaries";
+import MultipleChoice from "./pages/MultipleChoice";
 
 const StyledApp = styled.div`
   position: relative;
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route exact path="/summaries">
               <Summaries />
+            </Route>
+            <Route exact path="/multipleChoice">
+              <MultipleChoice />
             </Route>
           </Switch>
         </StyledApp>
