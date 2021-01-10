@@ -35,7 +35,7 @@ const End = () => {
                 <StyledText style={{ fontSize: "1rem", paddingTop: "1.25rem", width: "75%", margin: "0 auto" }}>Keep working on your opinion making skills and learn more about what’s really going on in the world.</StyledText>
                 <Link to={{ pathname: "/" }} style={{ textDecoration: "none" }}>
                     <Button style={{
-                        color: "#4EC007",
+                        color: "#FF9E00",
                         backgroundColor: "white",
                         borderRadius: "60px",
                         paddingLeft: "15px",
