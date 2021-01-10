@@ -6,6 +6,7 @@ import theme from "./theme";
 import Home from "./pages/Home";
 import Summaries from "./pages/Summaries";
 import MultipleChoice from "./pages/MultipleChoice";
+import Stakeholders from "./pages/Stakeholders";
 import End from "./pages/End";
 
 const StyledApp = styled.div`
@@ -45,6 +46,9 @@ function App() {
             </Route>
             <Route exact path="/end">
               <End />
+            </Route>
+            <Route exact path="/stakeholders">
+              <Stakeholders />
             </Route>
           </Switch>
         </StyledApp>

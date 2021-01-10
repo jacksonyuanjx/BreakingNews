@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const StyledText = styled.h1`
     text-align: center;
@@ -27,18 +28,20 @@ const End = () => {
                     <StyledText style={{ fontSize: "1rem", margin: "50% 0 0 1rem", position: "absolute", fontWeight: "normal" }}>Stories Completed</StyledText>
                 </ResultsCircle>
                 <StyledText style={{ fontSize: "1rem", paddingTop: "1.25rem", width: "75%", margin: "0 auto" }}>Keep working on your opinion making skills and learn more about what’s really going on in the world.</StyledText>
-                <Button style={{
-                    color: "#4EC007",
-                    backgroundColor: "white",
-                    borderRadius: "60px",
-                    paddingLeft: "15px",
-                    paddingRight: "15px",
-                    marginTop: "5rem",
-                    left: "35%",
-                    fontWeight: "bold",
-                }}>
-                    Read More
-                </Button>
+                <Link to={{ pathname: "/" }} style={{ textDecoration: "none" }}>
+                    <Button style={{
+                        color: "#4EC007",
+                        backgroundColor: "white",
+                        borderRadius: "60px",
+                        paddingLeft: "15px",
+                        paddingRight: "15px",
+                        marginTop: "5rem",
+                        left: "35%",
+                        fontWeight: "bold",
+                    }}>
+                        Read More
+                    </Button>
+                </Link>
             </div>
         </>
     );
