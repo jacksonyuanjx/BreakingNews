@@ -19,13 +19,13 @@ function CardSection() {
         loc="Canada"
         title={"Protests Take Place in Response to Trans-Mountain Pipeline"}
         img={img1}
-        desc=""
+        desc="Activists say they will battle against the Trans Mountain pipeline expansion..."
       ></Card>
       <Card
         loc="Global"
         title={"Many Front-Line Healthcare Workers Will Not Receive Vaccine"}
         img={img2}
-        desc=""
+        desc="Not all front-line workers say they will accept a COVID-19 vaccine..."
       ></Card>
       <Link to={{ pathname: "/summaries" }} style={{ textDecoration: "none" }}>
         <Card
@@ -38,13 +38,13 @@ function CardSection() {
       <Card
         loc="Global"
         title={"Ukraine International Airlines Flight 752 Crash"}
-        desc=""
+        desc="Ukraine International Airlines Flight 752 was shot down minutes after taking off..."
         img={img4}
       ></Card>
       <Card 
         loc="Global"
         title={"Ireland Legalizes Abortion"} 
-        desc="" 
+        desc="Ireland has voted to repeal its near-total ban on abortion nationwide..." 
         img={img5}>
         </Card>
     </StyledSection>
