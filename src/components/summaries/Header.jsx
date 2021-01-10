@@ -15,7 +15,7 @@ const StyledP = styled.p`
     padding-top: 1.20rem;
     padding-left: 1.25rem;
     font-size: 1.25rem;
-    color: blue;
+    color: #FF6D00;
 `;
 
 const StyledH1 = styled.h1`

@@ -47,7 +47,7 @@ const Summaries = () => {
   const title = "Mexico-US Border and the Transition to a New Administration";
   return !clicked ? (
     <>
-      <SummariesHeader region="United States" title={title} />
+      <SummariesHeader region="United States" title={title}/>
       <List
         //header={<ListHeader>Summaries</ListHeader>}
         dataSource={summaries}
