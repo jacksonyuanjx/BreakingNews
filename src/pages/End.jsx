@@ -27,7 +27,18 @@ const End = () => {
                     <StyledText style={{ fontSize: "1rem", margin: "50% 0 0 1rem", position: "absolute", fontWeight: "normal" }}>Stories Completed</StyledText>
                 </ResultsCircle>
                 <StyledText style={{ fontSize: "1rem", paddingTop: "1.25rem", width: "75%", margin: "0 auto" }}>Keep working on your opinion making skills and learn more about what’s really going on in the world.</StyledText>
-                <Button style={{ backgroundColor: "white", borderRadius: "60px", paddingLeft: "15px", paddingRight: "15px", marginTop: "5rem", left: "35%" }}>Read More</Button>
+                <Button style={{
+                    color: "#4EC007",
+                    backgroundColor: "white",
+                    borderRadius: "60px",
+                    paddingLeft: "15px",
+                    paddingRight: "15px",
+                    marginTop: "5rem",
+                    left: "35%",
+                    fontWeight: "bold",
+                }}>
+                    Read More
+                </Button>
             </div>
         </>
     );
