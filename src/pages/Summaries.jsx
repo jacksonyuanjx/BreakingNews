@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { List, Card } from "antd";
 import { Button } from "@material-ui/core";
 import { Redirect } from "react-router-dom";
 import SummariesHeader from "../components/summaries/Header";
 import Summary from "../components/summaries/Summary";
-import data from "../components/summaries/data";
+// import data from "../components/summaries/data";
+import firebase from "../components/firestore/Firestore";
 
 const ListHeader = styled.div`
   font-size: 1.5rem;
@@ -22,15 +23,31 @@ const StyledDiv = styled.div`
 
 //const cardColors = ["#9d4edd", "#9a8c98"];
 
+const db = firebase.firestore();
+
 const Summaries = () => {
   const [clicked, setClicked] = useState(false);
+  const [summaries, setSummaries] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await db.collection("summaries").get();
+      let docs = [];
+      res.forEach((doc) => {
+        docs.push(doc.data());
+      });
+      setSummaries(docs);
+    };
+    fetchData();
+  }, []);
+
   const title = "Mexico-US Border and the Transition to a New Administration";
   return !clicked ? (
     <>
       <SummariesHeader region="Canada" title={title} />
       <List
         //header={<ListHeader>Summaries</ListHeader>}
-        dataSource={data}
+        dataSource={summaries}
         renderItem={(item, index) => (
           <List.Item>
             <Card
