@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Home from "./pages/Home";
 import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import theme from "./theme";
+
+import Home from "./pages/Home";
+import Summaries from "./pages/Summaries";
 
 const StyledApp = styled.div`
   position: relative;
@@ -10,6 +12,7 @@ const StyledApp = styled.div`
   margin: 0 auto;
   background: #ededed;
   height: ${props => props.height + "px"};
+  overflow: scroll;
 `;
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/summaries">
+              <Summaries />
             </Route>
           </Switch>
         </StyledApp>
