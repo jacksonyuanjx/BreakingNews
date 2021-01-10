@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { List, Card } from "antd";
+import { Button } from "@material-ui/core";
 
-import StoriesHeader from "../components/stories/Header";
-import Story from "../components/stories/Story";
+import SummariesHeader from "../components/summaries/Header";
+import Summary from "../components/summaries/Summary";
 
-import data from "../components/stories/data";
+import data from "../components/summaries/data";
 
 const ListHeader = styled.div`
   font-size: 1.5rem;
@@ -23,11 +24,11 @@ const StyledDiv = styled.div`
 
 const cardColors = ["#c9ada7", "#9a8c98"];
 
-const Stories = () => {
+const Summaries = () => {
   const title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
   return (
     <>
-      <StoriesHeader region="Canada" title={title} />
+      <SummariesHeader region="Canada" title={title} />
       <List
         header={<ListHeader>Summaries</ListHeader>}
         dataSource={data}
@@ -41,13 +42,20 @@ const Stories = () => {
               }}
             >
               <StyledDiv>Article {index + 1} Summary</StyledDiv>
-              <Story imgURL={item.imgURL} summary={item.summary} />
+              <Summary imgURL={item.imgURL} summary={item.summary} />
             </Card>
           </List.Item>
         )}
       />
+      <Button
+        variant="contained"
+        color="primary"
+        style={{ float: "right", margin: "1.1rem" }}
+      >
+        Quiz
+      </Button>
     </>
   );
 };
 
-export default Stories;
+export default Summaries;
