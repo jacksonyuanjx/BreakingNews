@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Explanation from "./Explanation";
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
@@ -23,6 +23,10 @@ function ChoiceContainer(props) {
     setSubmitted(selected);
     setShowAns(true);
   };
+
+  useEffect(() => {
+    console.log(index / 3);
+  });
 
   return (
     <div className="container">
@@ -66,6 +70,8 @@ function ChoiceContainer(props) {
           setIndex={setIndex}
           correct={question.ans === submitted}
           index={index}
+          submitted={submitted}
+          question={question}
         ></Explanation>
       )}
 
@@ -73,7 +79,7 @@ function ChoiceContainer(props) {
       <LinearProgress
         style={{ marginLeft: 30, marginTop: 10, width: 300 }}
         variant="determinate"
-        value={index === 0 ? 33 : index === 1 ? 66 : 100}
+        value={(index / 3) * 100}
       ></LinearProgress>
     </div>
   );
