@@ -2,20 +2,30 @@ import React from "react";
 import styled from "styled-components";
 
 const QuestionContainer = styled.div`
-  height: 84px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 2px solid black;
   text-align: left;
-  padding-left: 8px;
-  padding-top: 24px;
-`;
-const TheQuestion = styled.h1`
-    font-size: 24px;
-    color: #000000;
-    letter-spacing: 1px;
+  padding-left: 30px;
+  padding-right: 30px;
 `;
 
-function Question() {
-  return <QuestionContainer><TheQuestion> Question Title Here?</TheQuestion></QuestionContainer>;
+const TheQuestion = styled.div`
+  font-size: 16px;
+  letter-spacing: 1px;
+`;
+
+function Question(props) {
+  return (
+    <QuestionContainer>
+      <TheQuestion>
+        <div style={{ fontSize: 24, marginBottom: 10 }}>
+          Select the statement that disconfirms each of the following claims:
+        </div>
+        {props.text}
+      </TheQuestion>
+    </QuestionContainer>
+  );
 }
 
 export default Question;
