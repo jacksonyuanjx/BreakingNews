@@ -2,15 +2,23 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
-  height: 84px;
-  border-bottom: 1px solid black;
+  height: 16vh;
+  border-bottom: 4px solid black;
+  padding-left: 24px;
+  padding-top: 24px;
+  letter-spacing: 1px;
+`;
+
+const Text = styled.h1`
   line-height: 84px;
-  text-align: center;
-  font-size: 40px;
+  text-align: left;
+  font-size: 36px;
 `;
 
 function Header() {
-  return <StyledHeader>Today's Stories</StyledHeader>;
+  return <StyledHeader>
+    <Text>Today's Stories</Text>
+    </StyledHeader>;
 }
 
 export default Header;

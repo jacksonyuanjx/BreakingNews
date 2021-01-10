@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Explanation from "./Explanation";
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";

@@ -16,11 +16,13 @@ function CardSection() {
   return (
     <StyledSection>
       <Card
+        loc="Canada"
         title={"Protests Take Place in Response to Trans-Mountain Pipeline"}
         img={img1}
         desc=""
       ></Card>
       <Card
+        loc="Global"
         title={"Many Front-Line Healthcare Workers Will Not Receive Vaccine"}
         img={img2}
         desc=""
@@ -28,16 +30,23 @@ function CardSection() {
       <Link to={{ pathname: "/summaries" }} style={{ textDecoration: "none" }}>
         <Card
           title={"US-Mexico Border and the Transition to a New Administration"}
+          loc="United States"
           img={img3}
-          desc=""
+          desc="The Trump administration announced Monday that 70,000 migrants were..."
         ></Card>
       </Link>
       <Card
+        loc="Global"
         title={"Ukraine International Airlines Flight 752 Crash"}
         desc=""
         img={img4}
       ></Card>
-      <Card title={"Ireland Legalizes Abortion"} desc="" img={img5}></Card>
+      <Card 
+        loc="Global"
+        title={"Ireland Legalizes Abortion"} 
+        desc="" 
+        img={img5}>
+        </Card>
     </StyledSection>
   );
 }

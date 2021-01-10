@@ -7,6 +7,7 @@
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: $normal-text-size;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -36,4 +37,18 @@ button {
   content: "";
   display: block;
   clear: both;
+}
+
+h5.MuiTypography-root.loc.MuiTypography-h5.MuiTypography-gutterBottom {
+  font-size: 12px;
+  margin: 0;
+}
+
+.MuiCardContent-root{
+  color: #000000;
+}
+
+.MuiCardContent-root:hover{
+  background-color: #9D4EDD;
+  color: #ffffff;
 }

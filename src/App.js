@@ -13,7 +13,7 @@ const StyledApp = styled.div`
   position: relative;
   max-width: 480px;
   margin: 0 auto;
-  background: #ededed;
+  background: #ffffff;
   height: ${props => props.height + "px"};
   overflow: scroll;
 `;
