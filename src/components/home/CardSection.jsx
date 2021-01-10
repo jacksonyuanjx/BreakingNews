@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import { Link } from "react-router-dom";
 import img1 from "../../assets/1.png";
 import img2 from "../../assets/2.png";
 import img3 from "../../assets/3.png";
@@ -24,11 +25,13 @@ function CardSection() {
         img={img2}
         desc=""
       ></Card>
-      <Card
-        title={"US-Mexico Border and the Transition to a Biden Administration"}
-        img={img3}
-        desc=""
-      ></Card>
+      <Link to={{ pathname: "/stories" }} style={{ textDecoration: "none" }}>
+        <Card
+          title={"US-Mexico Border and the Transition to a Biden Administration"}
+          img={img3}
+          desc=""
+        ></Card>
+      </Link>
       <Card
         title={"Ukraine International Airlines Flight 752 Crash"}
         desc=""
