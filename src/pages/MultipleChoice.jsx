@@ -29,12 +29,18 @@ function MultipleChoice() {
 
   return (
     <>
-      <Question text={questions[index].question} />
-      <ChoiceContainer
-        index={index}
-        setIndex={setIndex}
-        question={questions[index]}
-      />
+      {questions[index] &&
+        (
+          <>
+            <Question text={questions[index].question} />
+            <ChoiceContainer
+              index={index}
+              setIndex={setIndex}
+              question={questions[index]}
+            />
+          </>
+        )
+      }
     </>
   );
 }

@@ -69,11 +69,11 @@ function ChoiceContainer(props) {
         ></Explanation>
       )}
 
-      <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
+    <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
       <LinearProgress
         style={{ marginLeft: 30, marginTop: 10, width: 300 }}
         variant="determinate"
-        value={index === 0 ? 33 : index === 1 ? 66 : 100}
+        value={index === 0 ? 0 : index === 1 ? 33 : 66}
       ></LinearProgress>
     </div>
   );

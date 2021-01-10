@@ -15,10 +15,14 @@ function Explanation(props) {
   const { setSelected, setShowAns, setIndex, index, correct } = props;
 
   const handleClick = () => {
-    if (index < 1 && correct) {
+    if (index <= 1 && correct) {
       setShowAns(false);
       setSelected(null);
       setIndex(index + 1);
+      if (index === 1) {
+        window.location.href = "http://localhost:3000/#/stakeholders";
+      }
+      return;
     } else if (correct) {
       window.location = "/";
     }
@@ -39,7 +43,7 @@ function Explanation(props) {
           color="primary"
           onClick={handleClick}
         >
-          {index === 1 ? "Back to home page" : "Next"}
+          Next
         </Button>
       )}
     </>
