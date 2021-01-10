@@ -24,10 +24,6 @@ function ChoiceContainer(props) {
     setShowAns(true);
   };
 
-  useEffect(() => {
-    console.log(index / 3);
-  });
-
   return (
     <div className="container">
       <form>
@@ -75,12 +71,14 @@ function ChoiceContainer(props) {
         ></Explanation>
       )}
 
-    <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
-      <LinearProgress
-        style={{ marginLeft: 30, marginTop: 10, width: 300 }}
-        variant="determinate"
-        value={(index / 3) * 100}
-      ></LinearProgress>
+      <div style={{ position: "absolute", bottom: 50 }}>
+        <div style={{ marginLeft: 30 }}>Progress:</div>
+        <LinearProgress
+          style={{ marginLeft: 30, width: 400, marginTop: 10 }}
+          variant="determinate"
+          value={(index / 4) * 100}
+        ></LinearProgress>
+      </div>
     </div>
   );
 }

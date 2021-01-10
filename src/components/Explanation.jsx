@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
+import { Redirect } from "react-router-dom";
 
 const ExplanationWrapper = styled.div`
   color: black;
@@ -12,6 +13,7 @@ const ExplanationWrapper = styled.div`
 `;
 
 function Explanation(props) {
+  const [redirect, setRedirect] = useState(false);
   const {
     setSelected,
     setShowAns,
@@ -28,17 +30,22 @@ function Explanation(props) {
       setSelected(null);
       setIndex(index + 1);
     } else if (correct) {
-      window.location.href = "http://localhost:3000/#/stakeholders";
+      // window.location.href = "http://localhost:3000/#/stakeholders";
+      setRedirect(true);
     }
   };
 
-  return (
+  return !redirect ? (
     <>
       <ExplanationWrapper correct={correct}>
         <div style={{ fontSize: 18, marginBottom: 8 }}>
           {correct ? "Correct!" : "Incorrect"}
         </div>
-        <div>{question.explanations[submitted]}</div>
+        <div>
+          {submitted !== null
+            ? question.explanations[submitted]
+            : "Please select an option"}
+        </div>
       </ExplanationWrapper>
       {correct && (
         <Button
@@ -51,6 +58,8 @@ function Explanation(props) {
         </Button>
       )}
     </>
+  ) : (
+    <Redirect to="stakeholders"></Redirect>
   );
 }
 
