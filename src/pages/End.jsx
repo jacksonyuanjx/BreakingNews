@@ -5,22 +5,27 @@ import { Link } from "react-router-dom";
 
 const StyledText = styled.h1`
     text-align: center;
-    color: white;
+    color: black;
+`;
+
+const WhiteText = styled.h1`
+    text-align: center;
+    color: black;
 `;
 
 const ResultsCircle = styled.div`
     width: 150px;
     height: 150px;
-    background-color: #446FDD;
+    background-color: #FF9E00;
     border-radius: 50%;
-    box-shadow: 10px 10px 5px #21366D;
+    box-shadow: 10px 10px 5px #ff8c00;
     margin: 5rem auto 5rem auto;
 `;
 
 const End = () => {
     return (
         <>
-            <div style={{ backgroundColor: "#7EE141", margin: "0 auto", width: "100%", height: "100%", position: "relative" }}>
+            <div style={{ backgroundColor: "#9D4EDD", margin: "0 auto", width: "100%", height: "100%", position: "relative" }}>
                 <StyledText style={{ fontSize: "2.25rem", paddingTop: "10rem" }}>Congratulations!</StyledText>
                 <StyledText style={{ fontSize: "1rem", paddingTop: "1.25rem", fontWeight: "normal" }}>You have successfully completed the quiz.</StyledText>
                 <ResultsCircle style={{ position: "relative" }}>
