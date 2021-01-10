@@ -14,29 +14,28 @@ const ListHeader = styled.div`
 `;
 
 const StyledDiv = styled.div`
-  border-bottom: 1px solid black;
   text-align: left;
-  padding: 5px;
-  margin: 15px;
+  padding: 20px;
+  margin: 5px;
   font-size: 1.25rem;
 `;
 
-const cardColors = ["#c9ada7", "#9a8c98"];
+//const cardColors = ["#9d4edd", "#9a8c98"];
 
 const Summaries = () => {
   const [clicked, setClicked] = useState(false);
-  const title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
+  const title = "Mexico-US Border and the Transition to a New Administration";
   return !clicked ? (
     <>
       <SummariesHeader region="Canada" title={title} />
       <List
-        header={<ListHeader>Summaries</ListHeader>}
+        //header={<ListHeader>Summaries</ListHeader>}
         dataSource={data}
         renderItem={(item, index) => (
           <List.Item>
             <Card
               style={{
-                backgroundColor: index % 2 === 0 ? cardColors[0] : cardColors[1],
+                backgroundColor: "#ffffff",//index % 2 === 0 ? cardColors[0] : cardColors[1],
                 margin: "1rem",
                 borderRadius: "7.5px",
               }}

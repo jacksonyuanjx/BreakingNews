@@ -6,9 +6,9 @@ const questions = [
   {
     question: `"Biden will establish an open border policy, allowing crowds of illegal immigrants to enter the United States."`,
     options: [
-      "Biden will gradually alter Trump-era border policies to be more humane, but will do so gradually",
+      "Biden claims he will gradually alter border policies, but will do so gradually",
       "Biden hopes to reinstate the Obama Administration’s “catch-and-release policy",
-      "Biden’s Administration will maintain security of the US-Mexico border through aerial and ground surveillance technologies",
+      "Biden’s Administration will focus security effort at the US-Mexico border to aerial and ground surveillance technologies",
     ],
     explanations: [
       "This may still be seen as a way to support the above statement.Biden will halt the construction of the border wall (Incorrect: This may still be seen as a way to support the above statement.",
@@ -19,18 +19,18 @@ const questions = [
     ans: 2,
   },
   {
-    question: `"Mexico will pay for Trump’s border wall."`,
+    question: `"Mexico will pay for the border wall."`,
     options: [
-      "The border wall has been paid for entirely through US federal funding, partly allocated by congress and partly allocated unilaterally through a Trump executive order",
-      "President Trump suggested tolls for passage into America that will go towards paying off the cost of the wall",
-      "President Trump proposed a “border tax” to pay for the wall",
-      "President Trump said by used the remittance money of illegal immigrants to pay for the wall",
+      "The border wall has been paid for entirely through US federal funding",
+      "Tolls for passage into America that will go towards paying off the cost of the wall",
+      "Revenue from a “border tax” will fund the wall",
+      "Remittance money of illegal immigrants will fund the wall",
     ],
     explanations: [
       "This statement factually disconfirms this popular misconception.",
-      "This statement is false and refers to a claim Trump made in which Mexicans would pay for the wall through toll revenue.",
-      "President Trump used this as a campaigning tool and there have been no specific plans to further this policy.",
-      "This statement was falsely made by Trump as a description of how Mexico would pay for the wall",
+      "This is not the source of funding for the border wall.",
+      "This is not the source of funding for the border wall.",
+      "This is not the source of funding for the border wall",
     ],
     ans: 0,
   },
@@ -43,7 +43,7 @@ const questions = [
     ],
     explanations: [
       "This statement factually disconfirms the above misconception.",
-      "While true, this statement is misleading as it does not specify immigrants from Mexico, and thus does not disconfirm the above statement.",
+      "While true, this statement is misleading as it encompasses migrants not just from Mexico.",
       "This statement is true, but does not prove nor disprove that illegal crossing are at an all-time high.",
     ],
     ans: 0,
