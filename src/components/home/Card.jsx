@@ -23,11 +23,7 @@ export default function ImgMediaCard(props) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={require("../../assets/1.png")}
-        />
+        <CardMedia component="img" height="140" image={props.img} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}
