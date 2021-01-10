@@ -9,12 +9,20 @@ const StyledSection = styled.div`
 function CardSection() {
   return (
     <StyledSection>
-      <Card title="Story 1" desc="content 1"></Card>
-      <Card title="Story 2" desc="content 2"></Card>
-      <Card title="Story 3" desc="content 3"></Card>
-      <Card title="Story 4" desc="content 4"></Card>
-      <Card title="Story 5" desc="content 5"></Card>
-      <Card title="Story 6" desc="content 6"></Card>
+      <Card
+        title={"Protests Take Place in Response to Trans-Mountain Pipeline"}
+        desc=""
+      ></Card>
+      <Card
+        title={"Many Front-Line Healthcare Workers Will Not Receive Vaccine"}
+        desc=""
+      ></Card>
+      <Card
+        title={"US-Mexico Border and the Transition to a Biden Administration"}
+        desc=""
+      ></Card>
+      <Card title={"Ukraine International Airlines Flight 752 Crash"} desc=""></Card>
+      <Card title={"Ireland Legalizes Abortion"} desc=""></Card>
     </StyledSection>
   );
 }
