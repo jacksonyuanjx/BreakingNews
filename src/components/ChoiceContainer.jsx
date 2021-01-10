@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Explanation from "./Explanation";
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 const OptionWrapper = styled.div`
   margin: 30px;
@@ -10,24 +12,14 @@ const OptionWrapper = styled.div`
 function ChoiceContainer(props) {
   const { index, setIndex, question } = props;
   const [selected, setSelected] = useState(null);
+  const [showAns, setShowAns] = useState(false);
 
   const onOptionChange = index => {
     setSelected(index);
   };
 
-  const handleContinueClick = () => {
-    if (question.ans === selected) {
-      console.log("True");
-    } else {
-      console.log("False");
-    }
-    setSelected(null);
-    if (index < 2) {
-      setIndex(index + 1);
-    } else {
-      console.log("Quiz done!");
-      window.location = "/";
-    }
+  const handleSubmitClick = () => {
+    setShowAns(true);
   };
 
   return (
@@ -58,12 +50,29 @@ function ChoiceContainer(props) {
           variant="contained"
           color="secondary"
           onClick={() => {
-            handleContinueClick();
+            handleSubmitClick();
           }}
         >
-          Continue
+          Submit
         </Button>
       </form>
+
+      {showAns && (
+        <Explanation
+          setSelected={setSelected}
+          setShowAns={setShowAns}
+          setIndex={setIndex}
+          correct={question.ans === selected}
+          index={index}
+        ></Explanation>
+      )}
+
+      <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
+      <LinearProgress
+        style={{ marginLeft: 30, marginTop: 10, width: 300 }}
+        variant="determinate"
+        value={index === 0 ? 33 : index === 1 ? 66 : 100}
+      ></LinearProgress>
     </div>
   );
 }

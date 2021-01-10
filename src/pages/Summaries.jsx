@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { List, Card } from "antd";
 import { Button } from "@material-ui/core";
-
+import { Redirect } from "react-router-dom";
 import SummariesHeader from "../components/summaries/Header";
 import Summary from "../components/summaries/Summary";
-
 import data from "../components/summaries/data";
 
 const ListHeader = styled.div`
@@ -25,8 +24,9 @@ const StyledDiv = styled.div`
 const cardColors = ["#c9ada7", "#9a8c98"];
 
 const Summaries = () => {
+  const [clicked, setClicked] = useState(false);
   const title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
-  return (
+  return !clicked ? (
     <>
       <SummariesHeader region="Canada" title={title} />
       <List
@@ -51,10 +51,15 @@ const Summaries = () => {
         variant="contained"
         color="primary"
         style={{ float: "right", margin: "1.1rem" }}
+        onClick={() => {
+          setClicked(true);
+        }}
       >
         Quiz
       </Button>
     </>
+  ) : (
+    <Redirect to="/multipleChoice"></Redirect>
   );
 };
 
