@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import ReactHtmlParser from "react-html-parser";
+
 const StyledImg = styled.img`
     margin-left: auto;
     margin-right: auto;
@@ -13,14 +15,14 @@ const StyledImg = styled.img`
 const StyledP = styled.p`
     padding: 1rem 1rem 1.25rem 1rem;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 `;
 
 const Story = (props) => {
     return (
         <>
             <StyledImg src={props.imgURL} />
-            <StyledP>{props.summary}</StyledP>
+            <StyledP>{ReactHtmlParser(props.summary)}</StyledP>
         </>
     );
 };
