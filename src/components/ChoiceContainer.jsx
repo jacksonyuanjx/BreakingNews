@@ -75,7 +75,7 @@ function ChoiceContainer(props) {
         ></Explanation>
       )}
 
-      <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
+    <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
       <LinearProgress
         style={{ marginLeft: 30, marginTop: 10, width: 300 }}
         variant="determinate"
