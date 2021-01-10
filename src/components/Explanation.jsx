@@ -27,12 +27,8 @@ function Explanation(props) {
       setShowAns(false);
       setSelected(null);
       setIndex(index + 1);
-      if (index === 1) {
-        window.location.href = "http://localhost:3000/#/stakeholders";
-      }
-      return;
     } else if (correct) {
-      window.location = "/";
+      window.location.href = "http://localhost:3000/#/stakeholders";
     }
   };
 
