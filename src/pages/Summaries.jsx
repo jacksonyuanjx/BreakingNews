@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { List, Card } from "antd";
+import { Button } from "@material-ui/core";
 
 import SummariesHeader from "../components/summaries/Header";
 import Summary from "../components/summaries/Summary";
@@ -41,6 +42,7 @@ const Summaries = () => {
                     </List.Item>
                 )}
             />
+            <Button variant="contained" color="primary" style={{ float: "right", margin: "1.1rem" }}>Quiz</Button>
         </>
     );
 };
