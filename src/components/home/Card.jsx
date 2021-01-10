@@ -1,25 +1,42 @@
 import React from "react";
-import styled from "styled-components";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
-const StyledCard = styled.div`
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 1px solid black;
-  border-radius: 8px;
-`;
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: 40,
+  },
+});
 
-function Card(props) {
+export default function ImgMediaCard(props) {
+  const classes = useStyles();
+
   return (
-    <StyledCard>
-      <div style={{ marginBottom: 10 }}>{props.title}</div>
-      <div>{props.desc}</div>
-    </StyledCard>
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={require("../../assets/1.png")}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {props.title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {props.desc}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 }
-
-export default Card;

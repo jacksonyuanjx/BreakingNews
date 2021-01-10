@@ -10,6 +10,7 @@ const StyledApp = styled.div`
   margin: 0 auto;
   background: #ededed;
   height: ${props => props.height + "px"};
+  overflow: scroll;
 `;
 
 function App() {
