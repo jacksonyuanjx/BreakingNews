@@ -84,12 +84,14 @@ const Stakeholders = () => {
         </Button>
       </Link>
 
-      <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
+      <div style={{ margin: "1rem" }}>Progress:</div>
       <LinearProgress
-        style={{ marginLeft: 30, marginTop: 10, width: 300 }}
+        style={{ margin: "1rem", width: 300 }}
         variant="determinate"
         value={75}
       ></LinearProgress>
+
+      <div style={{ width: "100%", height: "5%", backgroundColor: "black", display: "flex", bottom: 0, position: "absolute" }} />
     </>
   );
 };

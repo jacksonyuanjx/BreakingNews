@@ -64,6 +64,7 @@ function MultipleChoice() {
               setIndex={setIndex}
               question={questions[index]}
             />
+            <div style={{ width: "100%", height: "5%", backgroundColor: "black", display: "flex", bottom: 0, position: "absolute" }} />
           </>
         )
       }

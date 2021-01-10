@@ -7,6 +7,7 @@ function Home() {
     <>
       <Header></Header>
       <CardSection></CardSection>
+      <div style={{ width: "100%", height: "5%", backgroundColor: "black", display: "flex", bottom: 0, }} />
     </>
   );
 }
