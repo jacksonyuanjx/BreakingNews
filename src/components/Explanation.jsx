@@ -12,10 +12,18 @@ const ExplanationWrapper = styled.div`
 `;
 
 function Explanation(props) {
-  const { setSelected, setShowAns, setIndex, index, correct } = props;
+  const {
+    setSelected,
+    setShowAns,
+    setIndex,
+    index,
+    correct,
+    submitted,
+    question,
+  } = props;
 
   const handleClick = () => {
-    if (index <= 1 && correct) {
+    if (index < 2 && correct) {
       setShowAns(false);
       setSelected(null);
       setIndex(index + 1);
@@ -34,7 +42,7 @@ function Explanation(props) {
         <div style={{ fontSize: 18, marginBottom: 8 }}>
           {correct ? "Correct!" : "Incorrect"}
         </div>
-        <div>Bluh bluh bluh</div>
+        <div>{question.explanations[submitted]}</div>
       </ExplanationWrapper>
       {correct && (
         <Button
