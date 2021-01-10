@@ -76,13 +76,6 @@ const Stakeholders = () => {
                 })}
             </List>
 
-            <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
-            <LinearProgress
-                style={{ marginLeft: 30, marginTop: 10, width: 300 }}
-                variant="determinate"
-                value={75}
-            ></LinearProgress>
-
             <Link to={{ pathname: "/end" }} style={{ textDecoration: "none" }}>
                 <Button
                     style={{ marginLeft: 30, marginTop: 20 }}
@@ -92,6 +85,13 @@ const Stakeholders = () => {
                 Submit
                 </Button>
             </Link>
+
+            <div style={{ marginLeft: 30, marginTop: 30 }}>Progress:</div>
+            <LinearProgress
+                style={{ marginLeft: 30, marginTop: 10, width: 300 }}
+                variant="determinate"
+                value={67}
+            ></LinearProgress>
         </>
     );
 };
