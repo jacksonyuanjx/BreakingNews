@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import Home from "./pages/home";
+import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import theme from "./theme";
 
 const StyledApp = styled.div`
@@ -7,7 +9,7 @@ const StyledApp = styled.div`
   max-width: 480px;
   margin: 0 auto;
   background: #ededed;
-  height: ${(props) => props.height + "px"};
+  height: ${props => props.height + "px"};
 `;
 
 function App() {
@@ -21,9 +23,18 @@ function App() {
     window.addEventListener("resize", onResize);
     return window.removeEventListener("resize", onResize);
   });
+
   return (
     <ThemeProvider theme={theme}>
-      <StyledApp height={height}></StyledApp>
+      <Router>
+        <StyledApp height={height}>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </StyledApp>
+      </Router>
     </ThemeProvider>
   );
 }
