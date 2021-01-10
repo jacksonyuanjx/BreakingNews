@@ -12,6 +12,7 @@ const OptionWrapper = styled.div`
 function ChoiceContainer(props) {
   const { index, setIndex, question } = props;
   const [selected, setSelected] = useState(null);
+  const [submitted, setSubmitted] = useState(null);
   const [showAns, setShowAns] = useState(false);
 
   const onOptionChange = index => {
@@ -19,6 +20,7 @@ function ChoiceContainer(props) {
   };
 
   const handleSubmitClick = () => {
+    setSubmitted(selected);
     setShowAns(true);
   };
 
@@ -50,7 +52,7 @@ function ChoiceContainer(props) {
           variant="contained"
           color="secondary"
           onClick={() => {
-            handleSubmitClick();
+            handleSubmitClick(selected);
           }}
         >
           Submit
@@ -62,7 +64,7 @@ function ChoiceContainer(props) {
           setSelected={setSelected}
           setShowAns={setShowAns}
           setIndex={setIndex}
-          correct={question.ans === selected}
+          correct={question.ans === submitted}
           index={index}
         ></Explanation>
       )}
