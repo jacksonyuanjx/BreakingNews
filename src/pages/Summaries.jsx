@@ -15,9 +15,12 @@ const ListHeader = styled.div`
 
 const StyledDiv = styled.div`
   text-align: left;
-  padding: 20px;
+  padding-left: 15px;
+  padding-top: 10px;
   margin: 5px;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  color: black;
+
 `;
 
 //const cardColors = ["#9d4edd", "#9a8c98"];
@@ -27,7 +30,7 @@ const Summaries = () => {
   const title = "Mexico-US Border and the Transition to a New Administration";
   return !clicked ? (
     <>
-      <SummariesHeader region="Canada" title={title} />
+      <SummariesHeader region="United States" title={title} />
       <List
         //header={<ListHeader>Summaries</ListHeader>}
         dataSource={data}
@@ -38,9 +41,10 @@ const Summaries = () => {
                 backgroundColor: "#ffffff",//index % 2 === 0 ? cardColors[0] : cardColors[1],
                 margin: "1rem",
                 borderRadius: "7.5px",
+                border: "1px solid #b19cd9"
               }}
             >
-              <StyledDiv>Article {index + 1} Summary</StyledDiv>
+              <strong><StyledDiv>Article {index + 1} Summary</StyledDiv></strong>
               <Summary imgURL={item.imgURL} summary={item.summary} />
             </Card>
           </List.Item>
@@ -48,8 +52,7 @@ const Summaries = () => {
       />
       <Button
         variant="contained"
-        color="primary"
-        style={{ float: "right", margin: "1.1rem" }}
+        style={{ float: "right", margin: "1.1rem", backgroundColor: "#9d4edd", color: "#ffffff"}}
         onClick={() => {
           setClicked(true);
         }}
