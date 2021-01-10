@@ -5,7 +5,8 @@ const StyledHeader = styled.div`
   height: 84px;
   border-bottom: 1px solid black;
   line-height: 84px;
-  padding-right: 32px;
+  text-align: center;
+  font-size: 40px;
 `;
 
 function Header() {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import theme from "./theme";
 
