@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Breaking News (nwHacks 2021)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
+We arrived at this idea wanting to improve education for the general public in a way that has lasting positive social impacts. With the current political climates around the globe, we wanted to help people learn or relearn how to make educated opinions and empathize with people with other views. 
 
-## Available Scripts
+After completing a user study to find out about our app’s viability, we were able to solidify the necessity of this application.
 
-In the project directory, you can run:
+## What it does
+* Breaking News seeks to help individuals break out of their echo chambers by presenting users with news stories as told through various perspectives and educating users to think critically
+* The app allows users to practice their critical thinking through a gamified sequence of questions, each of which challenging the user to view media from different perspectives
 
-### `npm start`
+## How we built it
+* We used React as a front-end framework and Material-UI to build UI components and views for this single page application.
+* For styling, we used scss combined with styled-components.
+* We also used Google Cloud Firestore as our database which stores the articles we retrieved.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Challenges we ran into
+* Some of the major challenges we faced includes our first attempt to create a mobile app using flutter, where we ran into problems getting virtual machines to work for testing purposes and as most of our group was new to mobile development, the learning curve was determined to be too large for the time limit and project scope
+* Our second biggest challenge was ensuring we didn’t show our own bias in the question bank
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Accomplishments that we're proud of
+* We were able to work cohesively as a team and complete this project in the time provided
+* The project completed actually solves a real social problem
+* We finished the project even though we had to restart several hours into the project due to a change in direction
 
-### `npm test`
+## What we learned
+* Even the exercise of creating this application forced us to reconsider our own biases and confront the echo chambers in which we often find ourselves. By reading articles on the same issue but from vastly different perspectives, we came to realize other perspectives and the value of acknowledging them, even if we don’t necessarily agree with them.
+* Technically, we were all met with some part of the tech stack that we had never used before. This project was a great opportunity for us to become more familiar with front-end and UI development.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What's next for Breaking News
+* Implement database to store past news articles and corresponding quizzes → would allow user to go back and learn about past events rather than just the current day
+* Implement natural language processing agent to summarize daily articles and generate relevant quiz questions
+* Embellish gamification by including a user leaderboard, which ranks users based on number of “events” (summaries and quizzes) completed. This would also require persistent storage of multiple user data using a database. Also, allow the user to personalize their account through avatar creation and user authentication credentials. 
