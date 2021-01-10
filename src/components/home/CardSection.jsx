@@ -25,7 +25,7 @@ function CardSection() {
         img={img2}
         desc=""
       ></Card>
-      <Link to={{ pathname: "/stories" }} style={{ textDecoration: "none" }}>
+      <Link to={{ pathname: "/summaries" }} style={{ textDecoration: "none" }}>
         <Card
           title={"US-Mexico Border and the Transition to a Biden Administration"}
           img={img3}

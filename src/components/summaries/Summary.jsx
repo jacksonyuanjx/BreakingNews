@@ -18,7 +18,7 @@ const StyledP = styled.p`
     font-size: 1.1rem;
 `;
 
-const Story = (props) => {
+const Summary = (props) => {
     return (
         <>
             <StyledImg src={props.imgURL} />
@@ -27,4 +27,4 @@ const Story = (props) => {
     );
 };
 
-export default Story;
+export default Summary;

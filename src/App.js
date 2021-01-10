@@ -4,7 +4,7 @@ import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import theme from "./theme";
 
 import Home from "./pages/Home";
-import Stories from "./pages/Stories";
+import Summaries from "./pages/Summaries";
 
 const StyledApp = styled.div`
   position: relative;
@@ -35,8 +35,8 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/stories">
-              <Stories />
+            <Route exact path="/summaries">
+              <Summaries />
             </Route>
           </Switch>
         </StyledApp>
