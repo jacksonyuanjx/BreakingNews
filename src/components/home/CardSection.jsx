@@ -29,8 +29,8 @@ function CardSection() {
       ></Card>
       <Link to={{ pathname: "/summaries" }} style={{ textDecoration: "none" }}>
         <Card
-          loc="US"
-          title={"US-Mexico Border and the Transition to a Biden Administration"}
+          title={"US-Mexico Border and the Transition to a New Administration"}
+          loc="United States"
           img={img3}
           desc="The Trump administration announced Monday that 70,000 migrants were..."
         ></Card>
