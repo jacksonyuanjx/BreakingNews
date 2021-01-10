@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const StyledText = styled.h1`
     text-align: center;
-    color: black;
+    color: white;
 `;
 
 const WhiteText = styled.h1`
     text-align: center;
-    color: black;
+    color: white;
 `;
 
 const ResultsCircle = styled.div`
